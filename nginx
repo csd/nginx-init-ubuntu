@@ -67,7 +67,7 @@
 #                               Consts
 #------------------------------------------------------------------------------
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/local/sbin/nginx
+DAEMON=/usr/sbin/nginx
 
 PS="nginx"
 PIDNAME="nginx"				#lets you do $PS-slave
@@ -94,8 +94,8 @@ NGINX_CONF_FILE="/usr/local/nginx/conf/nginx.conf"
 test -x $DAEMON || exit 0
 
 # Include nginx defaults if available
-if [ -f /etc/default/nginx ] ; then
-        . /etc/default/nginx
+if [ -f /etc/nginx ] ; then
+        . /etc/nginx
 fi
 
 #set exit condition
